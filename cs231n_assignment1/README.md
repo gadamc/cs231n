@@ -4,7 +4,9 @@ Details about this assignment can be found [on the course webpage](http://cs231n
 
 ## Setup
 
-Instead of a `virtualenv`, I've set up a `conda` environment.  Here is what I remember doing to set this up.
+The Course website contains instructions on how to set up a `virtualenv` and install all the code.
+
+However, instead of a `virtualenv`, I've set up a `conda` environment.  Here is what I remember doing to set this up.
 
 
 ```
@@ -13,6 +15,7 @@ Instead of a `virtualenv`, I've set up a `conda` environment.  Here is what I re
 >pip install -r requirements.txt
 >conda install jupyter
 >conda install matplotlib (might be necessary if you run into a weird runtime error, which I did the first time)
+>jupyter notebook
 ```
 
 
