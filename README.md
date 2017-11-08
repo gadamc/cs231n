@@ -1,8 +1,34 @@
-# cs231n
-
+# Seattle Deep Learning Meeupt: Project cs231n
+ 
 This is the project page for the Seattle Deep Learning Meetup Sub-group. 
 
-We are going through the Stanford CS231n course; discussing lectures and homeworks. 
+We are going through the Stanford CS231n course; discussing lectures, homeworks and
+will eventually build a project together.
 
-I will put my/our homework solutions here. 
+Course Syllabus: http://cs231n.stanford.edu/syllabus.html
+
+## Group meetup schedule
+
+We will try to meet once per week to discuss the lectures and work together on the assignments. 
+
+Here is our current schedule for the remainder of the year. 
+
+We will meet weekly at the IBM office at the Galvanize building. 
+
+**Canceled: Oct 24 meeting due to various reasons.**
+
+* ~~Oct 24. review Lectures 1, 2, and 3~~
+* Oct 30. review Lectures 1 - 6 and any assignment work
+* Nov 7. (date of Org Meetup) Discuss Assignment 1
+* Nov 14. Discuss Assignment 1 (v2) & maybe Lecture 7, 8 discussion
+* Nov 21. skip due to US Thanksgiving (Q: or not?)
+* Nov 28. Lecture 7, 8, 9 & any assignment 2 work
+* Dec 5 (date of Org Meetup) Lecture 10, Assignment 2
+* Dec 12. Lecture 11, 12
+* Dec 19. Lecture 13, 14  Question: Adam is out of town. We could do a Slack / video call. 
+* We could meet on the days after Christmas. Dec 27 - 31, depending on folks availability.
+* We could meet the week of Jan 2, again depending on availability
+* Jan 9 (date of Org Meetup) Assignment 3, project details
+
+## Group Repo with homework solutions / other code
 
