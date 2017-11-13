@@ -20,7 +20,7 @@ We will meet weekly at the IBM office at the Galvanize building.
 * ~~Oct 24. review Lectures 1, 2, and 3~~
 * Oct 30. review Lectures 1 - 6 and any assignment work
 * Nov 7. (date of Org Meetup) Discuss [Assignment 1](cs231n_assignment1)
-* Nov 14. Discuss [Assignment 1](cs231n_assignment1) (v2) & maybe Lecture 7, 8
+* Nov 14. **6pm to 8pm**. Discuss [Assignment 1](cs231n_assignment1) (v2) & maybe Lecture 7, 8
 * Nov 21. skip due to US Thanksgiving (Q: or not?)
 * Nov 28. Lecture 7, 8, 9 & any assignment 2 work
 * Dec 5 (date of Org Meetup) Lecture 10, Assignment 2
