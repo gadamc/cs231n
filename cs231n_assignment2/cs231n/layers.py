@@ -2,7 +2,7 @@ from builtins import range
 import numpy as np
 
 
-def affine_forward(x, w, b):
+def affine_forward(x, w, b, print_shape = False):
     """
     Computes the forward pass for an affine (fully-connected) layer.
 
@@ -25,8 +25,12 @@ def affine_forward(x, w, b):
     # TODO: Implement the affine forward pass. Store the result in out. You   #
     # will need to reshape the input into rows.                               #
     ###########################################################################
-    x = x.reshape(x.shape[0], -1)
-    out = x.dot(w) + b
+    out = x.reshape(x.shape[0], -1).dot(w) + b
+    if print_shape:
+        print("x " + str(x.shape))
+        print("w " + str(w.shape))
+        print("b " + str(b.shape))
+        print("out " + str(out.shape))
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -34,7 +38,7 @@ def affine_forward(x, w, b):
     return out, cache
 
 
-def affine_backward(dout, cache):
+def affine_backward(dout, cache, print_shape = False):
     """
     Computes the backward pass for an affine layer.
 
@@ -54,7 +58,14 @@ def affine_backward(dout, cache):
     ###########################################################################
     # TODO: Implement the affine backward pass.                               #
     ###########################################################################
-    pass
+    dw = np.dot(x.reshape(x.shape[0], -1).T, dout)
+    db = np.sum(dout,axis=0)
+    dx = np.dot(dout, w.T).reshape(x.shape)
+    if print_shape:
+        print("dx " + str(dx.shape))
+        print("dw " + str(dw.shape))
+        print("db " + str(db.shape))
+        print("dout " + str(dout.shape))
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -76,7 +87,7 @@ def relu_forward(x):
     ###########################################################################
     # TODO: Implement the ReLU forward pass.                                  #
     ###########################################################################
-    pass
+    out = np.maximum(0, x)
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -99,7 +110,7 @@ def relu_backward(dout, cache):
     ###########################################################################
     # TODO: Implement the ReLU backward pass.                                 #
     ###########################################################################
-    pass
+    dx = np.multiply(dout ,(x > 0))
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
