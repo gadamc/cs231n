@@ -65,7 +65,11 @@ def sgd_momentum(w, dw, config=None):
     # TODO: Implement the momentum update formula. Store the updated value in #
     # the next_w variable. You should also use and update the velocity v.     #
     ###########################################################################
-    pass
+    m = config['momentum']
+    lr = config['learning_rate']
+
+    v = m * v - lr * dw
+    next_w = w + v
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -99,7 +103,15 @@ def rmsprop(x, dx, config=None):
     # in the next_x variable. Don't forget to update cache value stored in    #
     # config['cache'].                                                        #
     ###########################################################################
-    pass
+    cache = config['cache']
+    eps = config['epsilon']
+    dr = config['decay_rate']
+    lr = config['learning_rate']
+
+    cache = dr * cache + (1 - dr) * dx**2
+    next_x = x - lr * dx / (np.sqrt(cache) + eps)
+
+    config['cache'] = cache
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -136,7 +148,21 @@ def adam(x, dx, config=None):
     # the next_x variable. Don't forget to update the m, v, and t variables   #
     # stored in config.                                                       #
     ###########################################################################
-    pass
+    lr = config['learning_rate']
+    beta1 = config['beta1']
+    beta2 = config['beta2']
+    eps = config['epsilon']
+    
+    config['m'] = beta1 * config['m'] + (1 - beta1) * dx
+    config['v'] = beta2 * config['v'] + (1 - beta2) * dx**2
+
+    m_corrected = config['m'] / (1 - beta1**config['t'])
+    v_corrected = config['v'] / (1 - beta2**config['t'])
+
+    next_x = x - lr * m_corrected / (np.sqrt(v_corrected) + eps)
+
+    config['t'] +=  1  #update for next iteration
+    
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
