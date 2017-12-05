@@ -23,9 +23,9 @@ We will meet weekly at the IBM office at the Galvanize building.
 * Nov 14. **6pm to 8pm**. Discuss [Assignment 1](cs231n_assignment1) (v2) & maybe Lecture 7, 8
 * Nov 21. skip due to US Thanksgiving (Q: or not?)
 * Nov 28. Lecture 7, 8, 9 & any assignment 2 work
-* Dec 5 (date of Org Meetup) Lecture 10, Assignment 2
-* Dec 12. Lecture 11, 12
-* Dec 19. Lecture 13, 14  Question: Adam is out of town. We could do a Slack / video call. 
+* Dec 5 (date of Org Meetup) Lecture 7, 8 [Assignment 2](cs231n_assignment1)
+* Dec 12. Lecture 9, 10 (any [Assignment 2](cs231n_assignment1) work)
+* Dec 19. Lecture 11, 12  Question: Adam is out of town. We could do a Slack / video call. 
 * We could meet on the days after Christmas. Dec 27 - 31, depending on folks availability.
 * We could meet the week of Jan 2, again depending on availability
 * Jan 9 (date of Org Meetup) Assignment 3, project details
