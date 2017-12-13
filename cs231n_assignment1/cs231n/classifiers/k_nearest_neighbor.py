@@ -136,6 +136,11 @@ class KNearestNeighbor(object):
     xtrsq = xtrsq.reshape(xtrsq.shape[0],1)
     crossprod = np.dot(X, self.X_train.T)
     dists = np.sqrt( -2*crossprod + xtesq + xtrsq.T)
+    
+    #diff = self.X_train.reshape(1, self.X_train.shape[0], self.X_train.shape[1]) - X.reshape(X.shape[0], 1, X.shape[1])
+    #diff = np.square(diff)
+    #diff = np.sum(diff, axis=2)
+    
     #########################################################################
     #                         END OF YOUR CODE                              #
     #########################################################################
