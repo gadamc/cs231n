@@ -1,4 +1,5 @@
 *~
 *.so
 .ipynb_checkpoints
+.floyd*
 
