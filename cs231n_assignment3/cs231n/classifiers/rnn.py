@@ -137,7 +137,56 @@ class CaptioningRNN(object):
         # defined above to store loss and gradients; grads[k] should give the      #
         # gradients for self.params[k].                                            #
         ############################################################################
-        pass
+        N, D = features.shape
+        H = b.shape[0]
+        T = captions.shape[1]
+        
+        #node 1
+        proj_aff, prof_aff_cache = affine_forward(features, W_proj, b_proj)
+        
+        #node 2
+        #summed_offset = proj_aff + b  #could explore 
+        
+        #node 2
+        x, x_cache = word_embedding_forward(captions_in, W_embed)
+        
+        #node 3
+        #what is h0?  --> here we use the affine transform output from the image features
+        # but there are other ways to do this. One would be to set h0 to 0 and then add
+        # the proj_aff to the offset for every step of the RNN, or just to the t = 1 
+        # step of the RNN (as done by Karpathy, Fei-Fei, 2015)
+        # ... duh, read the instructions more carefully...
+        #
+        h_t, h_t_cache = rnn_forward(x, proj_aff, Wx, Wh, b)  #(for t > 0)  
+        
+        #node 4
+        o_t, o_t_cache = temporal_affine_forward(h_t, W_vocab, b_vocab)
+        
+        #node 5
+        loss, do_t = temporal_softmax_loss(o_t, captions_out, mask)
+        
+        #gradient
+        #node 4
+        d_h_t, d_W_vocab, d_b_vocab = temporal_affine_backward(do_t, o_t_cache)
+        
+        #node 3
+        dx, d_proj_aff, d_Wx, d_Wh, d_b = rnn_backward(d_h_t, h_t_cache)
+        
+        #node 2
+        d_W_embed = word_embedding_backward(dx, x_cache)
+        
+        #node 1
+        d_features, d_W_proj, d_b_proj = affine_backward(d_proj_aff, prof_aff_cache)
+        
+        grads['W_proj'] = d_W_proj
+        grads['b_proj'] = d_b_proj
+        grads['W_embed'] = d_W_embed
+        grads['Wx'] = d_Wx
+        grads['Wh'] = d_Wh
+        grads['b'] = d_b
+        grads['W_vocab'] = d_W_vocab
+        grads['b_vocab'] = d_b_vocab
+        
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################
@@ -199,7 +248,32 @@ class CaptioningRNN(object):
         # functions; you'll need to call rnn_step_forward or lstm_step_forward in #
         # a loop.                                                                 #
         ###########################################################################
-        pass
+        proj_aff, _ = affine_forward(features, W_proj, b_proj)
+        
+        words = self._start * np.ones(N)
+        h_prev = proj_aff
+        
+        for t in range(max_length):
+            #print(captions[:,t].shape)
+            #print(words.shape)
+            print(t)
+            captions[:,t] = words
+            print(captions)
+            print(captions[:,t])
+            
+            x, _ = word_embedding_forward(captions[:,t], W_embed) #x.shape = N x 1 x D
+            
+            h_t, _ = rnn_step_forward( x.reshape(x.shape[0],-1), h_prev, Wx, Wh, b) #h_t.shape = N x H
+            
+            h_t = h_t.reshape(h_t.shape[0], 1, h_t.shape[1])  #reshape to N x 1 x H
+                        
+            o_t, _ = temporal_affine_forward(h_t, W_vocab, b_vocab) #o_t.shape = N x 1 x V
+            
+            words = np.argmax(o_t, axis=2).reshape(o_t.shape[0])
+            print(words)
+            
+            h_prev = h_t
+            
         ############################################################################
         #                             END OF YOUR CODE                             #
         ############################################################################

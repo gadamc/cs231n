@@ -236,9 +236,17 @@ def word_embedding_backward(dout, cache):
     # Note that Words can appear more than once in a sequence.                   #
     # HINT: Look up the function np.add.at                                       #
     ##############################################################################
+    
+    #I had to read a bit online from various sources to get what word embedding was doing
+    #since it wasn't introduced in the lecture or other material (seems it must be a 
+    #pre-requisite from the NLP course). 
+    # http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
+    # http://ruder.io/word-embeddings-1/
+   
+    # After thinking through it, it finally made sense why this is the right answer
     x, W_shape = cache
     dW = np.zeros(W_shape)
-    np.add.at(dW, x, dout)
+    np.add.at(dW, x, dout)  #see http://anie.me/numpy-tricks/ for clear explanation
     ##############################################################################
     #                               END OF YOUR CODE                             #
     ##############################################################################
