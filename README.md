@@ -13,7 +13,12 @@ We will try to meet once per week to discuss the lectures and work together on t
 
 Here is our current schedule for the remainder of the year. 
 
-We will meet weekly at the IBM office at the Galvanize building. 
+## New Members
+
+A few new folks showed up on Jan 30th meetup and were interested in starting to work on this. 
+
+Obviously you'll work out your own schedule. You can use my schedule below as a guide on the time
+it took for us to get through the material. 
 
 **Canceled: Oct 24 meeting due to various reasons.**
 
@@ -29,7 +34,12 @@ We will meet weekly at the IBM office at the Galvanize building.
 * We could meet on the days after Christmas. Dec 27 - 31, depending on folks availability.
 * We could meet the week of Jan 2, again depending on availability
 * Jan 9 (date of Org Meetup) Assignment 3, project details
-* Jan 30 (date of Org Meetup) Still discussing Assignment 3. Future plans TBD.
+* Jan 30 (date of Org Meetup) Still discussing Assignment 3. 
+
+TBD: Once Assignment 3 is complete, we may consider a project, or join another project within
+the Seattle Deep Learning Meetup. 
+
+
 
 
 
