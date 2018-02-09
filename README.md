@@ -39,6 +39,15 @@ it took for us to get through the material.
 TBD: Once Assignment 3 is complete, we may consider a project, or join another project within
 the Seattle Deep Learning Meetup. 
 
+## Useful links
+
+http://anie.me/numpy-tricks/
+https://arxiv.org/pdf/1412.6632.pdf
+https://arxiv.org/pdf/1411.4389.pdf
+https://cs.stanford.edu/people/karpathy/cvpr2015.pdf
+
+
+
 
 
 
