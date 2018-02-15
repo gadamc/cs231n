@@ -46,7 +46,7 @@ https://arxiv.org/pdf/1412.6632.pdf
 https://arxiv.org/pdf/1411.4389.pdf
 https://cs.stanford.edu/people/karpathy/cvpr2015.pdf
 
-
+http://cs231n.github.io/neural-networks-case-study/#grad
 
 
 
