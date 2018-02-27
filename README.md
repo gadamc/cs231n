@@ -20,7 +20,8 @@ A few new folks showed up on Jan 30th meetup and were interested in starting to 
 Obviously you'll work out your own schedule. You can use my schedule below as a guide on the time
 it took for us to get through the material. 
 
-**Canceled: Oct 24 meeting due to various reasons.**
+
+#### 2017-18 Schedule
 
 * ~~Oct 24. review Lectures 1, 2, and 3~~
 * Oct 30. review Lectures 1 - 6 and any assignment work
@@ -33,11 +34,9 @@ it took for us to get through the material.
 * Dec 19. Lecture 11, 12  Question: Adam is out of town. We could do a Slack / video call. 
 * We could meet on the days after Christmas. Dec 27 - 31, depending on folks availability.
 * We could meet the week of Jan 2, again depending on availability
-* Jan 9 (date of Org Meetup) Assignment 3, project details
-* Jan 30 (date of Org Meetup) Still discussing Assignment 3. 
+* Jan 9 (date of Org Meetup) Assignment 3, project proposals
+* Jan 30 (date of Org Meetup) Finish Assignment 3. 
 
-TBD: Once Assignment 3 is complete, we may consider a project, or join another project within
-the Seattle Deep Learning Meetup. 
 
 ## Useful links
 
